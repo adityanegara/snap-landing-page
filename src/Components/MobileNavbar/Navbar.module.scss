@@ -1,0 +1,22 @@
+.navbar-mobile{
+    margin-top: 3vh;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.navbar-mobile__logo{
+    h1{
+        margin: 0;
+        font-size: 2.3rem;
+    }
+}
+
+.navbar-mobile__hamburger{
+    button{
+        background-color: transparent;
+        border: none;
+    }
+}
