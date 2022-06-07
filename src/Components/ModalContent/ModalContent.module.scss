@@ -1,5 +1,5 @@
 @use '../../variables.scss'as *;
-.modal-nav{
+.modal-content{
     margin-top: 15px !important;
     list-style-type: none;
     padding: 0;
@@ -8,28 +8,38 @@
     flex-direction: column;
     gap: 10px;
     button{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
+        font-size: 18px;
         background-color: transparent;
         border: none;
-        font-family: $main-font;
-        font-size: 18px;
         color: $gray;
+        transition: ease-in 0.2s;
+        font-family: $main-font;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 500;
+    }
+    button:hover{
+        color: $dark;
     }
     a{
-        
-        padding-top: 100px;
-        margin-left: 8px;
-        font-family: $main-font;
-        font-size: 18px;
-        color: $gray;
+            text-decoration: none;
+            font-size: 18px;
+            color: $gray;
+            font-family: $main-font;
+            margin-left: 7px;
+            transition: ease-in 0.2s;
+    }
+    a:hover{
+        color: $dark;
     }
     .mt-3{
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .mt-4{
-        margin-top: 23px;
+        margin-top: 20px;
     }
+    
+ 
+ 
 }

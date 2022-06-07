@@ -3,26 +3,26 @@ import arrowDownIcon from '../../Assets/Icons/icon-arrow-down.svg';
 
 const ModalContent = () =>{
     return(
-        <ul className={styles['modal-nav']}>
-        <li>
-            <button>
-                <p>Features</p>
-                <img src={arrowDownIcon}/>
-            </button>
-        </li>
-        <li>
-            <button>
-                <p>Company</p>
-                <img src={arrowDownIcon}/>
-            </button>
-        </li>
-        <li className={styles['mt-3']}>
-            <a>Careers</a>
-        </li>
-        <li className={styles['mt-4']}>
-            <a>About</a>
-        </li>
-    </ul>
+      <ul className={styles['modal-content']}>
+          <li>
+                <button>
+                    <p>Features</p>
+                    <img src={arrowDownIcon} alt='arrow down'/>
+                </button>
+          </li>
+          <li>
+                <button>
+                    <p>Company</p>
+                    <img src={arrowDownIcon} alt='arrow down'/>
+                </button>
+          </li>
+          <li className={styles['mt-3']}>
+                <a href="#">Careers</a>
+          </li>
+          <li className={styles['mt-4']}>
+                <a href="#">About</a>
+          </li>
+      </ul>
     )
 }
 
