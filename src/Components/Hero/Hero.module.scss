@@ -1,0 +1,64 @@
+@use '../../variables.scss'as *;
+.hero{
+    margin-top: 2vh;
+    display: grid;
+    row-gap: 15px;
+    grid-template-areas: 
+        "hero-image"
+        "hero-title"
+        "hero-description"
+        "hero-cta"
+        "hero-sponsors";
+}
+
+@media only screen and (min-width: 600px) {
+    .hero{
+        grid-template-areas: 
+        "hero-title hero-image"
+        "hero-description hero-image"
+        "hero-cta hero-image"
+        "hero-sponsors hero-image";
+    }
+}
+
+.hero-image{
+    img{
+        width: 100vw;
+        aspect-ratio: 750 / 560;
+    }
+    grid-area: hero-image;
+}
+
+.hero-title{
+    margin-top: 3vh;
+    grid-area: hero-title;
+    h2{
+        color: $dark;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.hero-description{
+    grid-area: hero-description;
+    h3{
+        margin: 0;
+        line-height: 30px;
+        color: $gray;
+        text-align: center;
+        font-weight: 500;
+
+    }
+}
+
+.hero-cta{
+    grid-area: hero-cta;
+    background-color: coral;
+}
+
+.hero-sponsors{
+    grid-area: hero-sponsors;
+    background-color: darkolivegreen;
+}
