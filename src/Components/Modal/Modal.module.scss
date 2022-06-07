@@ -1,0 +1,69 @@
+@use '../../variables.scss'as *;
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 65%;
+    background-color: $white;
+    z-index: 1000;
+    .modal-content{
+        margin-top: 3vh;
+        .modal-close__button{
+            display: flex;
+            flex-direction: row-reverse;
+            button{
+          
+                background-color: transparent;
+                border: none;
+            }
+        }
+        .modal-nav{
+            margin-top: 15px !important;
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            button{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                background-color: transparent;
+                border: none;
+                font-family: $main-font;
+                font-size: 18px;
+                color: $gray;
+            }
+            a{
+                
+                padding-top: 100px;
+                margin-left: 8px;
+                font-family: $main-font;
+                font-size: 18px;
+                color: $gray;
+            }
+            .mt-3{
+                margin-top: 15px;
+            }
+            .mt-4{
+                margin-top: 23px;
+            }
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    transition: ease-in 0.2s;
+}
+
