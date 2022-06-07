@@ -39,7 +39,50 @@
     .mt-4{
         margin-top: 20px;
     }
-    
- 
- 
+}
+
+.modal-content__sub__menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    li{
+        margin-left: 25px;
+        a{
+            img{
+                position: relative;
+                bottom: 2px;
+            }
+            align-items: center;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+.button-group{
+    button{
+        font-size: 1em;
+        border: none;
+        padding: 15px 20px;
+        font-family: $main-font;
+        border-radius: 16px;
+        background-color: $white;
+        color: $dark;
+        border: 1px solid $dark;
+        transition: ease-in 0.2s;
+    }
+    button:nth-child(1){
+        border: 1px solid $white;
+    }
+    button:hover{
+        background-color: $dark;
+        color: $white;
+    }
+    gap: 15px;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
 }
