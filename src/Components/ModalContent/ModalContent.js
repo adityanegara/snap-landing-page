@@ -16,25 +16,25 @@ const ModalContent = () =>{
                 </button>
                 <ul className={styles['modal-content__sub__menu']}>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             <img src={todoListIcon} alt='todo list' />
                             Todo List
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             <img src={calendarIcon} alt='calendar' />
                             Calendar
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             <img src={reminderIcon} alt='reminders' />
                             Reminders
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             <img src={planningIcon} alt='planning' />
                             Planning
                         </a>
@@ -48,17 +48,17 @@ const ModalContent = () =>{
                 </button>
                 {/* <ul className={styles['modal-content__sub__menu']}>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             History
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             Our Team
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='https://github.com/adityanegara'>
                             Blog
                         </a>
                     </li>
@@ -66,10 +66,10 @@ const ModalContent = () =>{
                 </ul> */}
           </li>
           <li className={styles['mt-3']}>
-                <a href="#">Careers</a>
+                <a href="https://github.com/adityanegara">Careers</a>
           </li>
           <li className={styles['mt-4']}>
-                <a href="#">About</a>
+                <a href="https://github.com/adityanegara">About</a>
           </li>
       </ul>
       <div className={styles['button-group']}>
