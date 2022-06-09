@@ -11,15 +11,7 @@
     z-index: 1000;
     .modal-content{
         margin-top: 3vh;
-        .modal-close__button{
-            display: flex;
-            flex-direction: row-reverse;
-            button{
-          
-                background-color: transparent;
-                border: none;
-            }
-        }
+   
         
         
     }
@@ -36,3 +28,13 @@
     transition: ease-in 0.2s;
 }
 
+.modal-close__button{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row-reverse;
+    button{
+  
+        background-color: transparent;
+        border: none;
+    }
+}
