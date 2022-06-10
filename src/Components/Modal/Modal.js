@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import styles from './Modal.module.scss';
-import modalStore from '../../store';
+import uiStore from '../../store';
 import Container from '../Container/Container';
 import closeIcon from '../../Assets/Icons/icon-close-menu.svg'
 import 'animate.css';
@@ -8,9 +8,9 @@ import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';
 
 const Modal = ({children}) =>{
-  const isModalOpen = modalStore(state => state.isModalOpen);
+  const isModalOpen = uiStore(state => state.isModalOpen);
   const [modalClasses, setModalClasses] = useState("d-none");
-  const toggleModalOpen = modalStore(state => state.toggleModalOpen);
+  const toggleModalOpen = uiStore(state => state.toggleModalOpen);
   
   const showModal = (node) =>{
     setModalClasses("d-block");
@@ -38,9 +38,8 @@ const Modal = ({children}) =>{
                 <div className={styles['overlay']}>
                    <CSSTransition  in={isModalOpen} timeout={500} classNames={{
                        enterActive: 'animate__bounceInRight',
-                       exitActive: 'animate__backOutRight'
+                       exitActive: 'animate__fadeOutRight'
                    }} 
-            
                    className={` ${styles['modal']} animate__animated`}>
                     <div className={styles['modal-content']}>
                             <Container>
@@ -53,10 +52,7 @@ const Modal = ({children}) =>{
                             </Container>
                         </div>
                    </CSSTransition>
-                
                 </div>
-     
-     
         </CSSTransition>
     )
   }

@@ -2,11 +2,11 @@ import styles from './Navbar.module.scss'
 import closedMenuIcon from '../../Assets/Icons/icon-menu.svg';
 import Container from '../Container/Container';
 import Modal from '../Modal/Modal';
-import modalStore from '../../store';
+import uiStore from '../../store';
 import ModalContent from '../ModalContent/ModalContent';
 
 const MobileNavbar = ({logo, menu}) =>{
-    const toggleModalOpen = modalStore(state => state.toggleModalOpen);
+    const toggleModalOpen = uiStore(state => state.toggleModalOpen);
     return(
         <div className={styles['navbar-mobile']}>
             <Container>

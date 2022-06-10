@@ -1,8 +1,12 @@
 import create from "zustand";
 
-const modalStore = create(set => ({
+const uiStore = create(set => ({
     isModalOpen: false,
-    toggleModalOpen : () => set(state=>({isModalOpen: !state.isModalOpen}))
+    isFeaturesMenuOpen: false,
+    isCompanyMenuOpen: false,
+    toggleModalOpen : () => set(state=>({isModalOpen: !state.isModalOpen})),
+    toggleFeaturesMenuOpen: () =>set(state=>({isFeaturesMenuOpen: !state.isFeaturesMenuOpen})),
+    toggleCompanyMenuOpen: ()=>set(state=>({isCompanyMenuOpen: !state.isCompanyMenuOpen}))
 }))
 
-export default modalStore;
+export default uiStore;
