@@ -7,12 +7,6 @@ import ModalContent from '../ModalContent/ModalContent';
 
 const MobileNavbar = ({logo, menu}) =>{
     const toggleModalOpen = uiStore(state => state.toggleModalOpen);
-    const handleHamburgerClicked = () =>{
-        var body = document.body;
-        body.classList.toggle('noscroll');
-        toggleModalOpen();
-    }
-
     return(
         <div className={styles['navbar-mobile']}>
             <Container>
@@ -20,7 +14,7 @@ const MobileNavbar = ({logo, menu}) =>{
                     <h1>snap</h1>
                 </div>
                 <div className={styles['navbar-mobile__hamburger']}>
-                    <button onClick={handleHamburgerClicked} aria-label='open navbar button'>
+                    <button onClick={toggleModalOpen} aria-label='open navbar button'>
                         <img src={closedMenuIcon} alt='closed menu icon'/>
                     </button>
                 </div>
