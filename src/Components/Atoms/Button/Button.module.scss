@@ -1,0 +1,35 @@
+@use '../../../variables.scss' as *;
+
+.button{
+    font-size: 1em;
+    border: none;
+    padding: 15px 20px;
+    font-family: $main-font;
+    border-radius: 16px;
+    background-color: $dark;
+    color: $white;
+    border: 1px solid $dark;
+    transition: ease-in 0.2s;
+}
+.button-alternate{
+    font-size: 1em;
+    border: none;
+    padding: 15px 20px;
+    font-family: $main-font;
+    border-radius: 16px;
+    background-color: transparent;
+    color: $dark;
+    border: 1px solid transparent;
+    transition: ease-in 0.2s;
+}
+
+.button-alternate:hover{
+    border: 1px solid $dark;
+}
+
+
+.button:hover{
+    color: $dark;
+    background-color: $white;
+    font-weight: 700;
+}

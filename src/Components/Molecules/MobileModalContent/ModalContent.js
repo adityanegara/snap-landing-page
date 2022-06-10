@@ -8,6 +8,7 @@ import planningIcon from '../../../Assets/Icons/icon-planning.svg';
 import uiStore from '../../../store';
 import { CSSTransition } from 'react-transition-group';
 import {useState} from 'react';
+import Button from '../../Atoms/Button/Button';
 import 'animate.css';
 
 const ModalContent = () =>{
@@ -137,9 +138,8 @@ const ModalContent = () =>{
           </li>
       </ul>
       <div className={styles['button-group']}>
-        
-        <button>Login</button>
-        <button>Register</button>
+        <Button text="Login" isAlternate={true}/>
+        <Button text="Register"/>
       </div>
     </>
     )

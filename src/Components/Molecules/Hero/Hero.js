@@ -1,10 +1,10 @@
 import styles from './Hero.module.scss';
 import heroImageMobile from '../../../Assets/Images/image-hero-mobile.png';
-import Container from '../../Atoms/Container/Container';
 import dataBizLogo from '../../../Assets/Icons/client-databiz.svg';
 import audioPhileLogo from '../../../Assets/Icons/client-audiophile.svg';
 import meetLogo from '../../../Assets/Icons/client-meet.svg';
 import makerLogo from '../../../Assets/Icons/client-maker.svg';
+import Button from '../../Atoms/Button/Button';
 
 const Hero = () =>{
     return(
@@ -19,7 +19,7 @@ const Hero = () =>{
                 <h3>Get your team sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</h3>
             </div>
             <div className={styles['hero-cta']}>
-                 <button>Learn More</button>
+                <Button text="Learn More" />
             </div>
             <div className={styles['hero-sponsors']}>
                <ul>
