@@ -24,7 +24,13 @@ const Modal = ({children}) =>{
   const hideModal = () =>{
         setModalClasses("d-none")
   }
-    
+  
+  const handleCloseModalButtonClicked = () =>{
+    var body = document.body;
+    body.classList.toggle('noscroll');
+    toggleModalOpen();
+  }
+
   const renderModal = () =>{
     return(
         <CSSTransition  in={isModalOpen} timeout={500} classNames={{
@@ -44,7 +50,7 @@ const Modal = ({children}) =>{
                     <div className={styles['modal-content']}>
                             <Container>
                                 <div className={styles['modal-close__button']}>
-                                    <button onClick={toggleModalOpen} aria-label="Close Modal">
+                                    <button onClick={handleCloseModalButtonClicked} aria-label="Close Modal">
                                         <img src={closeIcon} alt="close icon"/>
                                     </button>
                                 </div>
