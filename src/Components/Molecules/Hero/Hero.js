@@ -1,10 +1,10 @@
 import styles from './Hero.module.scss';
-import heroImageMobile from '../../Assets/Images/image-hero-mobile.png';
-import Container from '../Container/Container';
-import dataBizLogo from '../../Assets/Icons/client-databiz.svg';
-import audioPhileLogo from '../../Assets/Icons/client-audiophile.svg';
-import meetLogo from '../../Assets/Icons/client-meet.svg';
-import makerLogo from '../../Assets/Icons/client-maker.svg';
+import heroImageMobile from '../../../Assets/Images/image-hero-mobile.png';
+import Container from '../../Atoms/Container/Container';
+import dataBizLogo from '../../../Assets/Icons/client-databiz.svg';
+import audioPhileLogo from '../../../Assets/Icons/client-audiophile.svg';
+import meetLogo from '../../../Assets/Icons/client-meet.svg';
+import makerLogo from '../../../Assets/Icons/client-maker.svg';
 
 const Hero = () =>{
     return(

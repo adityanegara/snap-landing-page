@@ -1,14 +1,8 @@
 import './global.scss';
-import MobileNavbar from './Components/MobileNavbar/Navbar';
-import Hero from './Components/Hero/Hero';
+import HomePage from './Components/Organisms/HomePage/HomePage';
 
 const App = () =>{
-    return(
-        <>
-            <MobileNavbar/>
-            <Hero/>
-        </>
-    )
+    return <HomePage/>
 }
 
 export default App;

@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import styles from './Modal.module.scss';
-import uiStore from '../../store';
+import uiStore from '../../../store';
 import Container from '../Container/Container';
-import closeIcon from '../../Assets/Icons/icon-close-menu.svg'
+import closeIcon from '../../../Assets/Icons/icon-close-menu.svg'
 import 'animate.css';
 import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';

@@ -1,11 +1,11 @@
 import styles from './ModalContent.module.scss';
-import arrowDownIcon from '../../Assets/Icons/icon-arrow-down.svg';
-import arrowUpIcon from '../../Assets/Icons/icon-arrow-up.svg';
-import todoListIcon from '../../Assets/Icons/icon-todo.svg';
-import calendarIcon from '../../Assets/Icons/icon-calendar.svg';
-import reminderIcon from '../../Assets/Icons/icon-reminders.svg';
-import planningIcon from '../../Assets/Icons/icon-planning.svg';
-import uiStore from '../../store';
+import arrowDownIcon from '../../../Assets/Icons/icon-arrow-down.svg';
+import arrowUpIcon from '../../../Assets/Icons/icon-arrow-up.svg';
+import todoListIcon from '../../../Assets/Icons/icon-todo.svg';
+import calendarIcon from '../../../Assets/Icons/icon-calendar.svg';
+import reminderIcon from '../../../Assets/Icons/icon-reminders.svg';
+import planningIcon from '../../../Assets/Icons/icon-planning.svg';
+import uiStore from '../../../store';
 import { CSSTransition } from 'react-transition-group';
 import {useState} from 'react';
 import 'animate.css';

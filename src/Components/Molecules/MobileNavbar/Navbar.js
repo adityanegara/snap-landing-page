@@ -1,9 +1,9 @@
 import styles from './Navbar.module.scss'
-import closedMenuIcon from '../../Assets/Icons/icon-menu.svg';
-import Container from '../Container/Container';
-import Modal from '../Modal/Modal';
-import uiStore from '../../store';
-import ModalContent from '../ModalContent/ModalContent';
+import closedMenuIcon from '../../../Assets/Icons/icon-menu.svg';
+import Container from '../../Atoms/Container/Container';
+import Modal from '../../Atoms/Modal/Modal';
+import uiStore from '../../../store';
+import ModalContent from '../MobileModalContent/ModalContent';
 
 const MobileNavbar = ({logo, menu}) =>{
     const toggleModalOpen = uiStore(state => state.toggleModalOpen);
