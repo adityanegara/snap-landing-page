@@ -1,6 +1,7 @@
 import MobileNavbar from "../../Molecules/MobileNavbar/Navbar";
 import DesktopNavbar from "../../Molecules/DesktopNavbar/DesktopNavbar";
 import MobileHero from "../../Molecules/MobileHero/MobileHero";
+import DesktopHero from "../../Molecules/DesktopHero/DesktopHero";
 import useMediaQuery from "../../../Hooks/useMediaQuery";
 
 const HomePage = () =>{
@@ -11,7 +12,7 @@ const HomePage = () =>{
     }
 
     const renderHero = (isDesktop)=>{
-        return(isDesktop) ? <div>Desktop Hero</div> : <MobileHero/>
+        return(isDesktop) ? <DesktopHero/> : <MobileHero/>
     }
 
     return(
