@@ -1,5 +1,78 @@
+@use '../../../variables.scss' as *;
+
 .desktop-hero{
-    width: 100%;
-    background-color: cornflowerblue;
-    height: 100vh;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; 
+    height: fit-content;   
+}
+
+.desktop-hero__image{
+    img{
+        width: 100%;
+    }
+}
+
+.desktop-hero__text{
+
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    height: 100%;
+    .desktop-hero__title{
+        height: 80%;
+        display: flex;
+        align-items: flex-end;
+ 
+        h2{
+            margin: 0;
+            font-size: 4em;
+            
+        }
+    }
+    .desktop-hero__description{
+        height: 100%;
+ 
+        h3{
+            line-height: 25px;
+            margin: 0;
+            font-weight: 500;
+            color: $gray;
+        }
+    }
+    .desktop-hero__cta{
+        
+        height: 100%;
+        button{
+            border: 1.5px solid $white;
+            font-family: $main-font;
+            background-color: $dark;
+            color: $white;
+            padding: 15px 25px;
+            border-radius: 15px;
+            transition: ease-in 0.2s;
+        }
+        button:hover{
+            background-color: transparent;
+            color: $dark;
+            border-color: $dark;
+        }
+    }
+    .desktop-hero__brands{
+
+        height: 100%;
+        ul{
+
+            height: 100%;
+            align-items: flex-end;
+            justify-content: space-between;
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+        }
+     
+    }
 }

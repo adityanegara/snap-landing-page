@@ -50,7 +50,7 @@ const DesktopNavbar = () =>{
                     <li>
                         <button onClick={toggleFeaturesMenuOpen}>
                             <p>Features</p>
-                            <img src={arrowDownIcon} alt='arrow down'/>
+                            <img src={(isFeaturesMenuOpen) ? arrowDownIcon : arrowUpIcon} alt='arrow'/>
                         </button>
 
                         <CSSTransition in={isFeaturesMenuOpen} timeout={200} classNames={{
@@ -95,7 +95,7 @@ const DesktopNavbar = () =>{
                     <li>
                         <button onClick={toggleCompanyMenuOpen}>
                             <p>Company</p>
-                            <img src={arrowDownIcon} alt='arrow down'/>
+                            <img src={(isCompanyMenuOpen) ? arrowDownIcon : arrowUpIcon} alt='arrow'/>
                         </button>
                         <CSSTransition in={isCompanyMenuOpen} timeout={200} classNames={{
                             enterActive: 'animate__fadeInDown',
