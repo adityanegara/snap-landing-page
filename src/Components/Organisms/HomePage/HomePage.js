@@ -1,18 +1,23 @@
 import MobileNavbar from "../../Molecules/MobileNavbar/Navbar";
-import Hero from "../../Molecules/Hero/Hero";
+import DesktopNavbar from "../../Molecules/DesktopNavbar/DesktopNavbar";
+import MobileHero from "../../Molecules/MobileHero/MobileHero";
 import useMediaQuery from "../../../Hooks/useMediaQuery";
 
 const HomePage = () =>{
-    const isDesktop = useMediaQuery('(min-width: 600px)');
+    const isDesktop = useMediaQuery('(min-width: 800px)');
 
     const renderNavbar = (isDesktop)=>{
-        return (isDesktop) ? <div>Desktop Navbar</div> : <MobileNavbar/>
+        return (isDesktop) ? <DesktopNavbar/> : <MobileNavbar/>
+    }
+
+    const renderHero = (isDesktop)=>{
+        return(isDesktop) ? <div>Desktop Hero</div> : <MobileHero/>
     }
 
     return(
         <>
             {renderNavbar(isDesktop)}
-            <Hero/>
+            {renderHero(isDesktop)}
         </>
     )
 }

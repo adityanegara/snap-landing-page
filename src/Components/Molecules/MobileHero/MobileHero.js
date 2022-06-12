@@ -1,4 +1,4 @@
-import styles from './Hero.module.scss';
+import styles from './MobileHero.module.scss';
 import heroImageMobile from '../../../Assets/Images/image-hero-mobile.png';
 import dataBizLogo from '../../../Assets/Icons/client-databiz.svg';
 import audioPhileLogo from '../../../Assets/Icons/client-audiophile.svg';
@@ -6,7 +6,8 @@ import meetLogo from '../../../Assets/Icons/client-meet.svg';
 import makerLogo from '../../../Assets/Icons/client-maker.svg';
 import Button from '../../Atoms/Button/Button';
 
-const Hero = () =>{
+
+const MobileHero = () =>{
     return(
         <div className={styles['hero']}>
             <div className={styles['hero-image']}>
@@ -41,4 +42,4 @@ const Hero = () =>{
     )
 }
 
-export default Hero;
+export default MobileHero;

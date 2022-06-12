@@ -1,0 +1,79 @@
+@use '../../../variables.scss' as *;
+
+.desktop-navbar{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    align-items: center;
+}
+.desktop-navbar__title{
+  font-size: 1.2em;
+  position: relative;
+  bottom: 3px;
+}
+
+.desktop-navbar__menu{
+    
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0; 
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        li{
+            button{
+                font-size: 15px;
+                background-color: transparent;
+                border: none;
+                color: $gray;
+                transition: ease-in 0.2s;
+                font-family: $main-font;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-weight: 500;
+            }
+            button:hover{
+               color: $dark;
+            }
+            a{
+                text-decoration: none;
+                font-size: 15px;
+                color: $gray;
+                font-family: $main-font;
+                margin-left: 18px;
+                transition: ease-in 0.2s;
+            }
+            a:hover{
+                color: $dark;
+            }
+        }
+    }
+}
+
+.desktop-navbar__button__groups{
+    gap: 25px;
+    display: flex;
+    justify-content: flex-end;
+    button{
+        padding: 5px 20px;
+        font-family: $main-font;
+        border-radius: 15px;
+        color: $gray;
+        background-color: transparent;
+        border: 1.5px solid $gray;
+        font-size: 15px;
+        transition: ease-in 0.2s;
+    }
+    button:nth-child(1){
+        border-color: $white;
+    }
+    button:hover{
+        background-color: $dark;
+        color: $white;
+    }
+}

@@ -11,15 +11,6 @@
         "hero-sponsors";
 }
 
-@media only screen and (min-width: 600px) {
-    .hero{
-        grid-template-areas: 
-        "hero-title hero-image"
-        "hero-description hero-image"
-        "hero-cta hero-image"
-        "hero-sponsors hero-image";
-    }
-}
 
 .hero-image{
     img{
@@ -89,3 +80,4 @@
     }
  
 }
+
