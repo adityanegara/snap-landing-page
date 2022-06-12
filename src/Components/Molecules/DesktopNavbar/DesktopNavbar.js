@@ -1,11 +1,45 @@
 import styles from './DesktopNavbar.module.scss';
-import arrowDownIcom from '../../../Assets/Icons/icon-arrow-down.svg';
+import arrowDownIcon from '../../../Assets/Icons/icon-arrow-down.svg';
+import arrowUpIcon from '../../../Assets/Icons/icon-arrow-up.svg';
 import todoListIcon from '../../../Assets/Icons/icon-todo.svg';
 import calendarIcon from '../../../Assets/Icons/icon-calendar.svg';
 import reminderIcon from '../../../Assets/Icons/icon-reminders.svg';
 import planningIcon from '../../../Assets/Icons/icon-planning.svg';
+import uiStore from '../../../store';
+import { useState } from 'react';
+import 'animate.css';
+import { CSSTransition } from 'react-transition-group';
 
 const DesktopNavbar = () =>{
+    const isFeaturesMenuOpen = uiStore(state => state.isFeaturesMenuOpen);
+    const toggleFeaturesMenuOpen = uiStore(state => state.toggleFeaturesMenuOpen);
+    const [featuresMenuClass, setFeaturesMenuClass] = useState("d-none");
+
+    const isCompanyMenuOpen = uiStore(state => state.isCompanyMenuOpen);
+    const toggleCompanyMenuOpen = uiStore(state => state.toggleCompanyMenuOpen);
+    const [companyMenuClass , setCompanyMenuClass] = useState("d-none");
+
+    const showFeaturesMenu = (node) =>{
+        setFeaturesMenuClass("d-block");
+        node.style.opacity = 0;
+    }
+    
+    const showCompanyMenu = (node) =>{
+           setCompanyMenuClass("d-block");
+        node.style.opacity = 0;
+    }
+
+    const removeOpacity = (node) =>{
+        node.style.opacity = 1;
+    }
+    
+    const hideFeaturesMenu = () =>{
+        setFeaturesMenuClass("d-none")
+    }
+
+    const hideCompanyMenu = () =>{
+        setCompanyMenuClass("d-none");
+    }
     return(
         <div className={styles['desktop-navbar']}>
             <div className={styles['desktop-navbar__title']}>
@@ -14,11 +48,21 @@ const DesktopNavbar = () =>{
             <div className={styles['desktop-navbar__menu']}>
                 <ul className={styles['desktop-navbar__menu__list']}>
                     <li>
-                        <button>
+                        <button onClick={toggleFeaturesMenuOpen}>
                             <p>Features</p>
-                            <img src={arrowDownIcom} alt='arrow down'/>
+                            <img src={arrowDownIcon} alt='arrow down'/>
                         </button>
-                        <div className={styles['desktop-navbar__sub__menu']}>
+
+                        <CSSTransition in={isFeaturesMenuOpen} timeout={200} classNames={{
+                            enterActive: 'animate__fadeInDown',
+                            exitActive: 'animate__fadeOutUp'
+                        }}
+                            onEnter={showFeaturesMenu}
+                            onEntered={removeOpacity}
+                            onExited={hideFeaturesMenu}
+                            className={`${featuresMenuClass} ${styles['desktop-navbar__sub__menu']} animate__animated`}
+                            >
+                            <div className={styles['desktop-navbar__sub__menu']}>
                             <ul >
                                 <li>
                                     <a>
@@ -46,14 +90,23 @@ const DesktopNavbar = () =>{
                                 </li>
                             </ul>
                         </div>
-                     
+                        </CSSTransition>
                     </li>
                     <li>
-                        <button>
+                        <button onClick={toggleCompanyMenuOpen}>
                             <p>Company</p>
-                            <img src={arrowDownIcom} alt='arrow down'/>
+                            <img src={arrowDownIcon} alt='arrow down'/>
                         </button>
-                        <div className={styles['desktop-navbar__sub__menu__company']}>
+                        <CSSTransition in={isCompanyMenuOpen} timeout={200} classNames={{
+                            enterActive: 'animate__fadeInDown',
+                            exitActive: 'animate__fadeOutUp',
+                        }}
+                            onEnter={showCompanyMenu}
+                            onEntered={removeOpacity}
+                            onExited={hideCompanyMenu}
+                            className={`${companyMenuClass} ${styles['desktop-navbar__sub__menu__company']} animate__animated`}
+                        >
+                            <div className={styles['desktop-navbar__sub__menu__company']}>
                             <ul >
                                 <li>
                                     <a>
@@ -72,6 +125,8 @@ const DesktopNavbar = () =>{
                                 </li>
                             </ul>
                         </div>
+                        </CSSTransition>
+                        
                     </li>
                     <li>
                         <a href='https://github.com/adityanegara'>Careers</a>
